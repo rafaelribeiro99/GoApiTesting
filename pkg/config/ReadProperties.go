@@ -1,11 +1,6 @@
 package config
 
 import (
-	"bufio"
-	"log"
-	"os"
-	"strings"
-
 	"github.com/magiconair/properties"
 )
 
@@ -16,7 +11,7 @@ func GetProps(prop string) string {
 	//if err != nil {
 	//	log.Fatal(err)
 	//}
-	p := properties.MustLoadFile("C:\\ambiente\\workspace-go\\git\\GoApiTesting\\test\\config\\config.properties", properties.UTF8)
+	p := properties.MustLoadFile("C:\\ambiente\\workspace-go\\git\\GoApiTesting\\pkg\\config\\config.properties", properties.UTF8)
 	value, _ := p.Get(prop)
 	return value
 }
